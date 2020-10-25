@@ -20,7 +20,8 @@ public class Frost {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        RegistryHandler.init();
+    MinecraftForge.EVENT_BUS.register(this);
 
     }
 

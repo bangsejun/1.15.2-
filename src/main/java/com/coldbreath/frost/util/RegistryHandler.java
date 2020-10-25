@@ -31,11 +31,11 @@ public class RegistryHandler {
     public static final RegistryObject<Block> FROZE_ORE = BLOCKS.register("froze_ore", FrozeOre::new);
 
     //BlockItem
-    public static final RegistryObject<Item> FROZE_ORE_ITEM = ITEMS.register("froze_ore", () -> new BlockItemBase(FROZE_ORE.get()));
+    public static final RegistryObject<Item> FROZE_ORE_ITEM = ITEMS.register("frozeore", () -> new BlockItemBase(FROZE_ORE.get()));
 
     //Blocks
     public static final RegistryObject<Block> PORTAL_FRAME = BLOCKS.register("portal_frame", PortalFrame::new);
 
     //BlockItem
-    public static final RegistryObject<Item> PORTAL_FRAME_ITEM = ITEMS.register("portal_frame", () -> new BlockItemBase(PORTAL_FRAME.get()));
+    public static final RegistryObject<Item> PORTAL_FRAME_ITEM = ITEMS.register("portalframe", () -> new BlockItemBase(PORTAL_FRAME.get()));
 }
