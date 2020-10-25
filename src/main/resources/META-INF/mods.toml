@@ -1,0 +1,17 @@
+modLoader = "javafml" #mandatory
+
+loaderVersion = "[28,)" #mandatory (26 is current forge version)
+
+[[mods]] #mandatory
+
+modId = "frost" #mandatory
+
+version = "$1.15.2-1.0.0" #mandatory
+
+displayName = "Frost" #mandatory
+
+authors = "myoung2, bbang" #optional
+
+description = '''
+Frost Mod is Comming!
+'''
