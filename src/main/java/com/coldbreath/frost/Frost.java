@@ -1,5 +1,6 @@
 package com.coldbreath.frost;
 
+import com.coldbreath.frost.init.ModBlocks;
 import com.coldbreath.frost.init.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -17,11 +18,10 @@ public class Frost {
     public Frost() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     MinecraftForge.EVENT_BUS.register(this);
-
     }
-
     private void setup(final FMLCommonSetupEvent event) {    }
 
     private void doClientStuff(final FMLClientSetupEvent event) {    }

@@ -15,4 +15,6 @@ public class ModBlocks {
     //Blocks
     public static final RegistryObject<Block> FROZE_ORE = ModBlocks.BLOCKS.register("froze_ore", FrozeOre::new);
     public static final RegistryObject<Block> PORTAL_FRAME = ModBlocks.BLOCKS.register("portal_frame", PortalFrame::new);
+
 }
+

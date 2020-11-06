@@ -15,8 +15,8 @@ public class ModItems {
     public static final RegistryObject<Item> FROZE = ITEMS.register("froze", ItemBase::new);
 
     // blockItems
-    public static final RegistryObject<Item> FROZE_ORE_ITEM = ITEMS.register("frozeore",
+    public static final RegistryObject<Item> FROZE_ORE_ITEM = ITEMS.register("froze_ore",
             () -> new BlockItemBase(ModBlocks.FROZE_ORE.get()));
-    public static final RegistryObject<Item> PORTAL_FRAME_ITEM = ITEMS.register("portalframe",
+    public static final RegistryObject<Item> PORTAL_FRAME_ITEM = ITEMS.register("portal_frame",
             () -> new BlockItemBase(ModBlocks.PORTAL_FRAME.get()));
 }

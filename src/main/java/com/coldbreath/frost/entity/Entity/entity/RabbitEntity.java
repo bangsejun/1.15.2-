@@ -1,24 +1,26 @@
 package com.coldbreath.frost.entity.Entity.entity;
 
 
+import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.world.World;
 import software.bernie.geckolib.core.IAnimatable;
 import software.bernie.geckolib.core.manager.AnimationData;
 import software.bernie.geckolib.core.manager.AnimationFactory;
 
-public class RabbitEntity extends MonsterEntity implements IAnimatable {
-    private AnimationFactory controller;
+import javax.annotation.Nullable;
 
+public class RabbitEntity extends AnimalEntity implements IAnimatable {
 
     public RabbitEntity(EntityType<RabbitEntity> type, World worldIn) {
         super(type, worldIn);
-        this.controller = new AnimationFactory(this);
     }
 
-    protected boolean func_225511_J_() {
-        return true;
+    @Nullable
+    @Override
+    public AgeableEntity createChild(AgeableEntity ageable) {
+        return null;
     }
 
     @Override
@@ -26,7 +28,8 @@ public class RabbitEntity extends MonsterEntity implements IAnimatable {
 
     }
 
+    @Override
     public AnimationFactory getFactory() {
-        return this.controller;
+        return null;
     }
 }
