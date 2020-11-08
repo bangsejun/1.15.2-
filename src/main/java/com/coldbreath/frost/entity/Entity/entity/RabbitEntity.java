@@ -32,4 +32,5 @@ public class RabbitEntity extends AnimalEntity implements IAnimatable {
     public AnimationFactory getFactory() {
         return null;
     }
+
 }

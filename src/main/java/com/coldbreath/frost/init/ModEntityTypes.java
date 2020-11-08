@@ -1,5 +1,6 @@
 package com.coldbreath.frost.init;
 
+import com.coldbreath.frost.Frost;
 import com.coldbreath.frost.entity.Entity.entity.RabbitEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -15,8 +16,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.BiFunction;
 
 public class ModEntityTypes {
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPE;
-    public static final RegistryObject<EntityType<RabbitEntity>> RABBIT;
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPE = DeferredRegister.create(ForgeRegistries.ENTITIES, Frost.MOD_ID);
+
+    public static final RegistryObject<EntityType<RabbitEntity>> RABBIT = ModEntityTypes.ENTITY_TYPE.register("rabbit", () -> createLivingEntity(RabbitEntity::new));
 
     public ModEntityTypes() {
     }
@@ -40,8 +42,4 @@ public class ModEntityTypes {
         return EntityType.Builder.create(factory, entityClassification).size(width, height).setTrackingRange(64).setShouldReceiveVelocityUpdates(true).setUpdateInterval(3).func_225435_d().build(location.toString());
     }
 
-    static {
-        ENTITY_TYPE = DeferredRegister.create(ForgeRegistries.ENTITIES, "frost");
-        RABBIT = ENTITY_TYPE.register("rabbit", () -> createLivingEntity(RabbitEntity::new));
-    }
 }
