@@ -25,12 +25,11 @@ public class RabbitEntity extends AnimalEntity implements IAnimatable {
 
     @Override
     public void registerControllers(AnimationData animationData) {
-
+        
     }
 
     @Override
     public AnimationFactory getFactory() {
         return null;
     }
-
 }

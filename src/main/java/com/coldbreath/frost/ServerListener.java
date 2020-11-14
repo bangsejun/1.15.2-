@@ -1,6 +1,6 @@
 package com.coldbreath.frost;
 
-import com.coldbreath.frost.init.ModEntityTypes;
+import com.coldbreath.frost.init.ModEntity;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -19,9 +19,9 @@ import java.util.Iterator;
 
         public static void onSetup(FMLCommonSetupEvent event) {
             RegistryObject var2;
-            for (Iterator var1 = ModEntityTypes.ENTITY_TYPE.getEntries().iterator();
-                var1.hasNext();
-                var2 = (RegistryObject) var1.next()) {
+            for (Iterator var1 = ModEntity.ENTITY_TYPE.getEntries().iterator();
+                 var1.hasNext();
+                 var2 = (RegistryObject) var1.next()) {
             }
 
         }

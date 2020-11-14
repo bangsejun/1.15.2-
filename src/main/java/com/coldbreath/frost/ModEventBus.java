@@ -2,7 +2,7 @@ package com.coldbreath.frost;
 
 import com.coldbreath.frost.entity.Client.RabbitRenderer;
 import com.coldbreath.frost.entity.Entity.entity.RabbitEntity;
-import com.coldbreath.frost.init.ModEntityTypes;
+import com.coldbreath.frost.init.ModEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -24,6 +24,6 @@ public class ModEventBus {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void registerEntityRenderer(FMLClientSetupEvent event) {
-        RenderingRegistry.registerEntityRenderingHandler((EntityType<RabbitEntity>) ModEntityTypes.RABBIT.get(), RabbitRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler((EntityType<RabbitEntity>) ModEntity.RABBIT.get(), RabbitRenderer::new);
     }
 }
